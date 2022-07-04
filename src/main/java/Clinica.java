@@ -9,7 +9,7 @@
  *
  * @author marco
  */
-public class Escola {
+public class Clinica {
 
     public static void main(String[] args) {
         Cadastro();
