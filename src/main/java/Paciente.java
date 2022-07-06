@@ -8,9 +8,14 @@
  * @author marcos
  */
 public class Paciente {
-    private int matricula;
-    private int idade;
-    private String nome;
-    private String endereco;
-    private char sexo;
+    // private int matricula;
+    //private int idade;
+    public String Nome;
+    //private String endereco;
+    //private char sexo;
+    
+    public void CadastroPaciente() {
+        this.nome = new Nome;
+    }
 }
+
