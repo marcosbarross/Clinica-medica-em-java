@@ -38,6 +38,7 @@ public class CadastroPaciente extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Clínica Médica");
         setResizable(false);
 
         jLabel1.setText("NOME:");
