@@ -13,9 +13,3 @@ public class Paciente {
     public String Nome;
     //private String endereco;
     //private char sexo;
-    
-    public void CadastroPaciente() {
-        this.nome = new Nome;
-    }
-}
-

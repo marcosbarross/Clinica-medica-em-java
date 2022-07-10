@@ -2,25 +2,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.clinica;
+
 
 import javax.swing.JOptionPane;
+import java.util.List;
 
-/**
- *
- * @author marcos
- */
 public class CadastroMedico extends javax.swing.JFrame {
 
     private String blankSpace;
+    public String medname;
+    
 
     /**
      * Creates new form CadastroMedico
      */
-    public CadastroMedico() {
-        initComponents();
-    }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -111,7 +107,8 @@ public class CadastroMedico extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
         if(nome.getText().equals("")){
@@ -124,10 +121,11 @@ public class CadastroMedico extends javax.swing.JFrame {
         }
         else if(senha.getText().equals("")){
             this.blankSpace = "senha";
-            JOptionPane.showMessageDialog(null, "Campo " + blankSpace + " vazio!" );
+            JOptionPane.showMessageDialog(null, "Campo " + blankSpace + " vazio!" );          
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
 
+    }//GEN-LAST:event_jButton1ActionPerformed
+   
     private void cpfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpfActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cpfActionPerformed
@@ -135,6 +133,8 @@ public class CadastroMedico extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+    
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -177,4 +177,12 @@ public class CadastroMedico extends javax.swing.JFrame {
     private javax.swing.JTextField nome;
     private javax.swing.JPasswordField senha;
     // End of variables declaration//GEN-END:variables
+
+    private List ArrayList() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    private CadastroMedico() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

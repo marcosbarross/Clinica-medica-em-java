@@ -8,8 +8,6 @@
  * @author marco
  */
 public class Medico {
-    private int matriculamed;
-    private String nome;
-    private String especialidade;
+    String nome;
     
 }
