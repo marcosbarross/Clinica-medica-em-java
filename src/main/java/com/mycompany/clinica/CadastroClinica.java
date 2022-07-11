@@ -13,6 +13,8 @@ import javax.swing.table.DefaultTableModel;
  */
 public class CadastroClinica extends javax.swing.JFrame {
 
+    private String blankSpace;
+
     /**
      * Creates new form CadastroClinica
      */
@@ -124,9 +126,18 @@ public class CadastroClinica extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        DefaultTableModel clinicas = (DefaultTableModel) tabelaClinicas.getModel();
+        if(clinica.getText().equals("")){
+            this.blankSpace = "clínica";    
+            JOptionPane.showMessageDialog(null, "Campo " + blankSpace + " vazio!" );
+        }
+        else if(endereco.getText().equals("")){
+            this.blankSpace = "endereço";
+            JOptionPane.showMessageDialog(null, "Campo " + blankSpace + " vazio!" );
+        }
+        else {DefaultTableModel clinicas = (DefaultTableModel) tabelaClinicas.getModel();
         Object[] dados = {clinica.getText(), endereco.getText()};
-        clinicas.addRow(dados);        // TODO add your handling code here:
+        clinicas.addRow(dados);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void removebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removebuttonActionPerformed

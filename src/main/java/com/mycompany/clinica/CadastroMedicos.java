@@ -13,6 +13,8 @@ import javax.swing.table.DefaultTableModel;
  */
 public class CadastroMedicos extends javax.swing.JFrame {
 
+    private String blankSpace;
+
     /**
      * Creates new form CadastroMedicos
      */
@@ -142,9 +144,26 @@ public class CadastroMedicos extends javax.swing.JFrame {
     }//GEN-LAST:event_especialidadeActionPerformed
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        DefaultTableModel medicos = (DefaultTableModel) tabelaMedicos.getModel();
+        if(nomeMedico.getText().equals("")){
+            this.blankSpace = "nome";
+            JOptionPane.showMessageDialog(null, "Campo " + blankSpace + " vazio!" );
+        }
+        
+        else if(especialidade.getText().equals("")){
+            this.blankSpace = "especialidade";
+            JOptionPane.showMessageDialog(null, "Campo " + blankSpace + " vazio!" );
+        }
+        
+        else if(enderecoMedico.getText().equals("")){
+            this.blankSpace = "endereço";
+            JOptionPane.showMessageDialog(null, "Campo " + blankSpace + " vazio!" );
+                    
+        }
+        
+        else{DefaultTableModel medicos = (DefaultTableModel) tabelaMedicos.getModel();
         Object[] dados = {nomeMedico.getText(), especialidade.getText(), enderecoMedico.getText()};
         medicos.addRow(dados);// TODO add your handling code here:
+                }
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
